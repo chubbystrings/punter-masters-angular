@@ -52,8 +52,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/assets/umbrella.png')",
-      }
+        'tri-pattern': "url('/assets/bg-triangle.svg')",
+        'tri-pattern-two': "url('/assets/bg-triangle-2.svg')",
+        'tri-pattern-three': "url('/assets/bg-triangle-3.svg')",
+        'tri-pattern-four': "url('/assets/bg-triangle-4.svg')",
+      },
+
     },
   },
   plugins: [],

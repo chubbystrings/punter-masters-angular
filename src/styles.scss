@@ -33,9 +33,22 @@ body::-webkit-scrollbar {
   }
 }
 .display-large {
-  @apply  text-[36px] md:text-[45px] font-bold leading-[44px] md:leading-[52px] lg:leading-[64px] lg:text-[64px];
+  @apply text-[36px] md:text-[45px] font-bold leading-[44px] md:leading-[52px] lg:leading-[84px] lg:text-[64px];
   @extend .bg-gradient-copy;
 }
+
+.display-medium {
+  @apply text-[36px] md:text-[45px] font-bold leading-[44px] md:leading-[52px] lg:leading-[72px] lg:text-[45px];
+  @extend .bg-gradient-copy;
+}
+
+.title-large {
+  @apply text-[18px] leading-[24px]  lg:text-[32px] lg:leading-[48px] text-[#0B0A33];
+}
+.title-medium {
+  @apply text-[16px] leading-[32px] lg:text-[18px] text-[#0B0A33];
+}
+
 .link {
   @apply cursor-pointer inline-block px-0 py-[5px] relative before:content-['*'] before:bg-pri-default;
   &:before {
@@ -66,5 +79,18 @@ body::-webkit-scrollbar {
     @apply shadow-[5px_10px_10px_0px_rgba(0,0,0,0.25)];
     background-position: 0;
   }
+}
 
+.feature-card {
+  @apply h-[430px] lg:h-[450px] pb-[32px] pl-[16px] rounded-[16px] w-[250px] lg:w-[300px] bg-light flex gap-4 justify-center flex-col py-10 px-2;
+  transition: all .5s ease-out;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  @extend .big-shadow;
+  &:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+.big-shadow {
+  // box-shadow:  #BB3B73 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, #AD1457 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, #C8628F 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, #D689AB 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, #E4B1C7 40px -40px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
