@@ -84,8 +84,8 @@ body::-webkit-scrollbar {
 .feature-card {
   @apply h-[430px] lg:h-[450px] pb-[32px] pl-[16px] rounded-[16px] w-[250px] lg:w-[300px] bg-light flex gap-4 justify-center flex-col py-10 px-2;
   transition: all .5s ease-out;
-  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  @extend .big-shadow;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // @extend .big-shadow;
   &:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }

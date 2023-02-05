@@ -1,15 +1,15 @@
 <div class="relative">
   <!-- header -->
 
-  <app-header [scroll]="scrollValue"></app-header>
+  <app-header></app-header>
 
   <!-- hero section -->
   <div
-    class="px-[32px] md:px-[64px] lg:px-[120px] h-screen bg-light grid grid-cols-2"
+    class="pt-[100px]  md:pb-0 md:pt-0 px-[32px] md:px-[64px] lg:px-[120px] h-auto md:h-screen bg-light grid grid-cols-1 md:grid-cols-2"
   >
     <div class="h-full justify-center flex flex-col gap-10">
       <div class="max-w-[780px]">
-        <h2 class="display-large">
+        <h2 class="display-large text-center md:text-left">
           Punter Masters, A place for master bettors
         </h2>
       </div>
@@ -25,15 +25,15 @@
   </div>
 
   <!-- Section two -->
-  <div class="h-[953px] bg-cover bg-center bg-tri-pattern">
+  <div class="h-auto md:h-[953px] bg-cover bg-center bg-tri-pattern pt-[100px] md:pt-0">
     <div
-      class="px-[32px] md:px-[64px] lg:px-[120px] grid grid-cols-2 relative h-full"
+      class="px-[32px] md:px-[64px] lg:px-[120px] lg:pt-[100px] grid grid-cols-1 md:grid-cols-2 relative h-full"
     >
       <div class="h-full flex flex-col">
         <div
           class="big-shadow border border-pri-bg px-3 py-7 rounded-lg flex flex-col gap-7 relative"
         >
-          <div class="absolute w-[150px] h-[150px] right-[-100px] top-[-40px]">
+          <div class="absolute w-[70px] h-[70px] md:w-[150px] md:h-[150px] top-[20px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <img src="/assets/punter-icon-2.svg" class="h-full w-full" />
           </div>
           <p class="title-large">
@@ -82,12 +82,12 @@
   </div>
 
   <!-- section three -->
-  <div class="relative h-[893px] bg-cover bg-center bg-tri-pattern-two">
+  <div class="relative h-auto md:h-[893px] bg-cover bg-center bg-tri-pattern-two md:pt-[0px] pt-[150px]">
     <div
-      class="px-[32px] md:px-[64px] lg:px-[120px] grid grid-cols-2 justify-center h-full"
+      class="px-[32px] md:px-[64px] lg:px-[120px] grid grid-cols-1 md:grid-cols-2 justify-center h-full lg:pt-[100px]"
     >
-      <div class="">
-        <div class="h-full w-full">
+      <div class="order-2 md:order-1">
+        <div class="h-full">
           <img src="/assets/ninja-2.svg" class="h-full w-full" />
         </div>
       </div>
@@ -97,7 +97,7 @@
             class="big-shadow border border-pri-bg px-3 py-7 rounded-lg flex flex-col gap-7 relative"
           >
             <div
-              class="absolute w-[150px] h-[150px] right-[-100px] top-[-40px]"
+              class="absolute w-[70px] h-[70px] md:w-[150px] md:h-[150px] sm:left-auto top-[-20px] lg:right-[-100px] lg:top-[-40px]"
             >
               <img src="/assets/punter-icon-2.svg" class="h-full w-full" />
             </div>
@@ -144,12 +144,12 @@
 
   <!-- section four -->
 
-  <div class="relative h-[772px] py-3">
-    <div class="w-[150px] h-[150px] mx-auto">
+  <div class="relative h-auto md:h-[772px] py-3 px-[32px] md:px-[64px] lg:px-[120px] pt-[50px] md:pt-0">
+    <div class="w-[70px] h-[70px] md:w-[150px] md:h-[150px] mx-auto ">
       <img src="/assets/punter-icon-2.svg" class="h-full w-full" />
     </div>
     <div
-      class="px-[32px] md:px-[64px] lg:px-[120px] flex justify-center gap-5 py-3"
+      class="flex lg:justify-center gap-5  overflow-x-auto snap-x snap-mandatory py-3"
     >
       <app-card
         iconUrl="/assets/share-icon.svg"
@@ -169,14 +169,15 @@
     </div>
   </div>
 
+
   <!-- section 5 -->
-  <div class="relative h-[953px] bg-cover bg-center bg-tri-pattern-three">
-    <div class="px-[32px] md:px-[64px] lg:px-[120px] grid grid-cols-2 h-[932px]">
-      <div class="h-full justify-start flex flex-col gap-10">
+  <div class="relative h-auto md:h-[953px] bg-cover bg-center bg-tri-pattern-three pt-[100px] md:pt-0">
+    <div class="px-[32px] md:px-[64px] lg:px-[120px] grid grid-cols-1 md:grid-cols-2  gap-[50px] md:gap-0 lg:pt-[100px]">
+      <div class="h-full justify-start flex flex-col gap-10 order-2 md:order-1 ">
         <div
-          class="big-shadow border border-pri-bg px-3 py-7 rounded-lg flex flex-col gap-7 relative max-w-lg"
+          class="big-shadow border border-pri-bg px-3 py-7 rounded-lg flex flex-col gap-7 relative w-full md:max-w-lg"
         >
-          <div class="absolute w-[150px] h-[150px] right-[-100px] top-[-40px]">
+          <div class="absolute w-[70px] h-[70px] md:w-[150px] md:h-[150px] top-[0px]  md:top-[20px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <img src="/assets/punter-icon-2.svg" class="h-full w-full" />
           </div>
           <p class="title-large">
@@ -225,9 +226,9 @@
   </div>
 
   <!-- footer section -->
-  <div class="h-[953px] bg-cover bg-center bg-tri-pattern-four">
-    <div class="flex items-center justify-center w-full py-5 gap-10 flex-col">
-      <div class="w-[150px] h-[150px]">
+  <div class="h-auto md:h-[773px] bg-cover bg-center bg-tri-pattern-four pt-[100px] md:pt-0">
+    <div class="flex items-center justify-center w-full py-5 gap-10 flex-col px-[32px] md:px-[64px] lg:px-[120px]">
+      <div class="w-[70px] h-[70px] md:w-[150px] md:h-[150px]">
         <img src="/assets/punter-icon-2.svg" class="h-full w-full" />
       </div>
       <div class="max-w-lg">
@@ -243,6 +244,19 @@
           <img src="/assets/arrow-right.svg" alt="arrow left" />
         </button>
       </div>
+    </div>
+    <div class="md:absolute md:bottom-0 md:w-full">
+      <hr class="border-2 border-sec-50  drop-shadow-xl" />
+    <div class="flex justify-between px-[32px] md:px-[64px] lg:px-[120px] items-center">
+      <div class="w-[70px] h-[70px] md:w-[150px] md:h-[150px]">
+        <img src="/assets/punter-icon-2.svg" class="h-full w-full rotate-90" />
+      </div>
+      <div class="flex gap-3 flex-col sm:flex-row">
+        <a class="text text-lg link">Contact</a >
+        <a class="text text-lg link">Blog</a >
+        <a class="text text-lg link">Careers</a >
+      </div>
+    </div>
     </div>
   </div>
 </div>
