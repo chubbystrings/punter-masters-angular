@@ -1,0 +1,21 @@
+<div
+  (click)="toggleNav()"
+  *ngIf="menuOpen"
+  [ngClass]="{
+    'fixed w-full h-full bg-sec-100 opacity-50 top-0 right-0 bottom-0 left-0 z-20 cursor-pointer bg-[rgba(0,0,0,0.5)] transition-all duration-200 ease-out': true
+  }"
+></div>
+<div
+  [ngClass]="{
+    'pt-10 bg-light fixed top-0 w-[240px] h-screen z-50 bg-gray-700 p-5 flex flex-col space-y-5 text-white duration-300 transition-all ease-out': true,
+    'left-[-250px]': !menuOpen,
+    'left-[0px]': menuOpen
+  }"
+>
+  <div>
+    <ng-content class=".header"></ng-content>
+  </div>
+  <div>
+    <ng-content class=".content"></ng-content>
+  </div>
+</div>

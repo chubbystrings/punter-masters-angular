@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "punter-masters-angular:build:production",
+            "firebaseProject": "punter-masters",
+            "firebaseHostingSite": "punter-masters"
+          }
         }
       }
     }

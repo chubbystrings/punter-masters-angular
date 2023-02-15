@@ -1,12 +1,26 @@
-<div
-  [ngClass]="[headerClass, condHeader]"
->
-  <div class=" w-[88px] h-[88px]">
+<div [ngClass]="[headerClass, condHeader]">
+  <div class="w-[70px] h-[70px] md:w-[88px] md:h-[88px]">
     <img src="/assets/punter-icon-2.svg" class="w-full h-full" alt="logo" />
   </div>
-  <div class="flex gap-4 items-center">
-    <a class="text text-lg link">Home</a>
-    <a class="text text-lg link">Login</a>
-    <a class="text text-lg link">Sign Up</a>
+  <div class="gap-4 items-center hidden md:flex">
+    <a class="text text-lg link" routerLink="/"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a class="text text-lg link" routerLink="/auth/login" [routerLinkActive]="'active'">Login</a>
+    <a class="text text-lg link" routerLink="/auth/signup" [routerLinkActive]="'active'">Sign Up</a>
+  </div>
+  <div class="md:hidden flex items-center">
+    <button class="outline-none mobile-menu-button" (click)="handleMenu()">
+      <svg
+        class="w-6 h-6 text-gray-500"
+        x-show="!showMenu"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
 </div>

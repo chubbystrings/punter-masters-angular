@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   getYPosition(e: Event): number {
-    return (e.target as any).documentElement.scrollTop;
+    return (e.target as any).documentElement ?  (e.target as any).documentElement.scrollTop : (e.target as any).body.scrollTop
   }
 
   ngOnDestroy(): void {

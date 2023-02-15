@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "punter-masters": {
+      "hosting": {
+        "punter-masters-angular": [
+          "punter-masters"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "punter-masters"
+  }
+}
