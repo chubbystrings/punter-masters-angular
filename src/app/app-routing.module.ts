@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthRoutingModule } from './modules/auth/auth-routing.module';
 import { GuessRoutingModule } from './modules/guest/guest-routing.module';
+import { AuthGuard } from './services/auth.guard';
+import { GuestGuard } from './services/guest.guard';
 
 const routes: Routes = [
   {
@@ -12,15 +14,20 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
 
   {
     path: 'dashboard',
-    loadChildren: () => import ('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+    canActivate: [AuthGuard],
   },
 
-  { path: '**', pathMatch: 'full', component: NotFoundComponent},
+  { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];
 
 @NgModule({

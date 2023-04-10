@@ -1,41 +1,74 @@
-<app-guest-layout></app-guest-layout>
-<div class="pt-[100px] px-[32px] md:px-[64px] lg:px-[120px] h-screen bg-tri-pattern bg-cover bg-center">
-  <div class="grid grid-cols-1 md:grid-cols-2 h-full">
-
-    <div class="h-[600px] flex flex-col align-start gap-3 p-5 lg:py-5 lg:px-20">
-      <h3 class="title-large">Welcome Back,</h3>
-      <p class="title-medium font-light text-sec-100">Please enter your details below</p>
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-col gap-1">
-          <label >Email</label>
-          <input type="email" name="email" id="login-email" class="punter-input" placeholder="Enter your email" />
+<app-guest-layout>
+  <div
+    class="px-[32px] md:px-[64px] lg:px-[120px] bg-tri-pattern bg-cover bg-center pt-[50px] lg:h-[720px] h-auto"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+      <form
+        #f="ngForm"
+        (ngSubmit)="onSubmit(f)"
+        class="h-[600px] flex flex-col align-start gap-3 p-5 lg:py-5 lg:px-20 overflow-y-auto"
+      >
+        <h3 class="title-large">Welcome Back,</h3>
+        <p class="title-medium font-light text-sec-100">
+          Please enter your details below
+        </p>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              id="login-email"
+              class="punter-input"
+              placeholder="Enter your email"
+              ngModel
+              required="true"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              id="login-password"
+              class="punter-input"
+              placeholder="Enter your password"
+              ngModel
+              required="true"
+            />
+          </div>
         </div>
-        <div class="flex flex-col gap-1">
-          <label >Password</label>
-          <input type="password" name="password" id="login-password" class="punter-input" placeholder="Enter your password" />
+        <div>
+          <p class="title-medium text-pri-default text-right">
+            Forgot password?
+          </p>
         </div>
-      </div>
-      <div>
-        <p class="title-medium text-pri-default text-right">Forgot password?</p>
-      </div>
-      <div class="w-full">
-        <button class="btn">Sign up</button>
-      </div>
-      <h3 class="text-center text-sec-100">OR</h3>
-      <div class="w-full">
-        <button class="btn-outline flex gap-2">
-          <span><img alt="google" src="/assets/google.svg" /></span>
-          Sign up with gmail
-        </button>
-      </div>
-      <div class="mx-auto">
-        <small class="text-sec-100">Don't have an account ? <span class="text-pri-default">Sign up</span></small>
-      </div>
-    </div>
-    <div class="hidden md:flex justify-center ">
-      <div class="h-[500px] w-[350px]">
-        <img alt="girl holding a phone" src="/assets/section-5-img.png" class="w-full h-full" />
+        <div class="w-full">
+          <button class="btn" [disabled]="isLoading || !f.valid">Sign In</button>
+        </div>
+        <h3 class="text-center text-sec-100">OR</h3>
+        <div class="w-full">
+          <button class="btn-outline flex gap-2" type="button" (click)="signInWithGoogle()" [disabled]="isLoading">
+            <span><img alt="google" src="/assets/google.svg" /></span>
+            Sign in with gmail
+          </button>
+        </div>
+        <div class="mx-auto">
+          <small class="text-sec-100"
+            >Don't have an account ?
+            <span class="text-pri-default">Sign up</span></small
+          >
+        </div>
+      </form>
+      <div class="hidden md:flex justify-center">
+        <div class="">
+          <img
+            alt="girl holding a phone"
+            src="/assets/ninja-4.svg"
+            class="w-full h-full"
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
+</app-guest-layout>

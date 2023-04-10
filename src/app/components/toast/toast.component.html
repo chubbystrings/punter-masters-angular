@@ -1,0 +1,40 @@
+<!-- <div
+  [ngClass]="{
+    'flex p-5 z-10 fixed top-[50px] left-1/2 transform -translate-x-1/2 shadow-xl drop-shadow-lg rounded-md bg-pri-bg max-w-xl': true,
+    'text-error border-x-8 border-error': notify.type === 'error',
+    'text-accent-200 border-l-4 border-l-accent-200': notify.type === 'info',
+    'text-sec-default border-l-4 border-l-sec-default': notify.type === 'success'
+
+  }"
+  *ngIf="show"
+>
+  {{ notify.message }}
+</div> -->
+
+<div
+  id="myToast"
+  [ngClass]="{
+    'fixed z-10 top-[50px] left-1/2 transform -translate-x-1/2 px-5 py-4 bg-light drop-shadow-lg border-x-8': true,
+    hidden: !show,
+    'text-error  border-error': notify.type === 'error',
+    'text-accent-200  border-accent-200': notify.type === 'info',
+    'text-green-400  border-green-400':
+      notify.type === 'success'
+  }"
+>
+  <p class="text-sm flex gap-1">
+    <!-- Polish the toast with an circle blue "i" (stands for information) -->
+    <span
+      [ngClass]="{
+        'w-[20px] h-[20px] mr-2 p-0 flex justify-center items-center rounded-full text-light font-extrabold': true,
+        'text-error': notify.type === 'error',
+        'text-accent-200': notify.type === 'info',
+        'text-green-400' : notify.type === 'success'
+      }"
+      >
+      {{ notify.type === 'error' ? 'X' : notify.type === 'info' ? 'i' : ''}}
+      </span
+    >
+    {{ notify.message }}
+  </p>
+</div>

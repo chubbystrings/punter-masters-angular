@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { GuestLayoutComponent } from 'src/app/layouts/guest-layout/guest.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { SideNavComponent } from 'src/app/components/side-nav/side-nav.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,7 @@ import { SideNavComponent } from 'src/app/components/side-nav/side-nav.component
   declarations: [ GuestLayoutComponent, HeaderComponent, SideNavComponent ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [ CommonModule, GuestLayoutComponent, HeaderComponent, SideNavComponent]
 })

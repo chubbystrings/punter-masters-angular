@@ -1,0 +1,26 @@
+<app-guest-layout>
+  <div class="h-[720px] bg-center bg-no-repeat bg-auto bg-not-found md:pt-0">
+    <div
+      class="px-[32px] md:px-[64px] lg:px-[120px] lg:pt-[100px] flex justify-center relative h-full"
+    >
+      <div class="flex flex-col max-w-[600px]">
+        <div
+          class="big-shadow border border-pri-bg px-3 py-7 rounded-lg flex flex-col gap-7 relative bg-pri-bg"
+        >
+        <h2 class="text-center display-medium m-0 p-0">Oops!</h2>
+          <p class="title-medium text-center sm:text-left break-words break-all">
+            seems you haven't verified your email
+            (<span class="italic break-words">{{ email || 'not available' }}</span>) yet.
+          </p>
+
+          <div class="w-full md:w-[302px] flex justify-center mx-auto gap-3">
+            <a routerLink="/auth" class="btn flex justify-center gap-3">
+              verify & join the fun
+              <img src="/assets/arrow-right.svg" alt="arrow left" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-guest-layout>

@@ -1,8 +1,13 @@
-<app-side-nav>
-  <div class="content flex flex-col gap-3">
-    <a class="text text-lg link" routerLink="/"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a class="text text-lg link" routerLink="/auth/login" [routerLinkActive]="'active'">Login</a>
-    <a class="text text-lg link" routerLink="/auth/signup" [routerLinkActive]="'active'">Sign Up</a>
+<div class="">
+  <app-side-nav >
+    <div class="content flex flex-col gap-3">
+      <a class="text text-lg link" routerLink="/"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a class="text text-lg link" routerLink="/auth/login" [routerLinkActive]="'active'">Login</a>
+      <a class="text text-lg link" routerLink="/auth/signup" [routerLinkActive]="'active'">Sign Up</a>
+    </div>
+  </app-side-nav>
+  <app-header></app-header>
+  <div class="pt-[100px]">
+    <ng-content></ng-content>
   </div>
-</app-side-nav>
-<app-header></app-header>
+</div>
